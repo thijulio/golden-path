@@ -14,6 +14,38 @@ tooling — it points to it. Golden rule: **an executed decision (a published
 @thijulio package or a project scaffold) beats this document.** Docs rot;
 templates don't.
 
+## This Repository
+
+The golden path ships as an **Nx + pnpm monorepo** (this repo):
+
+- `apps/site/` — documentation site (Angular 22, standalone). Content is typed in
+  `apps/site/src/app/data/*` and rendered by `apps/site/src/app/pages/*`.
+- `packages/templates/` — executable scaffolds (future). One template = one
+  executed decision; added one at a time.
+- Decisions live at the repo root: `AGENTS.md`, `tech-radar.md`, `decisions/`.
+
+### Commands
+
+| Command | What it does |
+|---|---|
+| `pnpm install` | install workspace dependencies |
+| `pnpm start` | run the docs site (dev server) |
+| `pnpm build` | `nx build site` — production build |
+| `pnpm test` | `nx test site` — unit tests (Vitest) |
+| `pnpm graph` | `nx graph` — dependency graph |
+
+### Deploy
+
+Netlify — see `netlify.toml`. Build command `pnpm install --frozen-lockfile && nx build site`,
+publish dir `apps/site/dist/site/browser`. Domain `golden-path.thijulio.com` (CNAME Route53).
+A push does not deploy; deploy is a separate human-gated action.
+
+### Keeping content in sync
+
+The site's typed data (`apps/site/src/app/data/*`) is a curated mirror of this
+decision layer. The markdown here is the source of truth; when a decision
+changes, update both.
+
 ## Repositories / Packages It References
 
 - @thijulio/eslint-config, @thijulio/prettier-config, @thijulio/tsconfig — repo dev-tooling
