@@ -1,0 +1,55 @@
+<p class="eyebrow">Decisions</p>
+<h1>Stack &amp; Decisions</h1>
+<p class="lead">Locked decisions. Do not relitigate.</p>
+
+<h2>Universal — every project</h2>
+<table>
+  <thead><tr><th>Domain</th><th>Choice</th><th>Notes</th></tr></thead>
+  <tbody>
+    @for (row of universal; track row.domain) {
+      <tr><td>{{ row.domain }}</td><td><strong>{{ row.choice }}</strong></td><td>{{ row.notes }}</td></tr>
+    }
+  </tbody>
+</table>
+
+<h2>Frontend framework — per-project choice</h2>
+<p>React 19 is the default. Vue and Angular are accepted alternatives. What the golden path governs is the <strong>container, not the framework</strong>:</p>
+<ul>
+  <li>Nx rules and project structure (apps/libs, module boundaries, plugin inference)</li>
+  <li>design-system tokens/CSS (framework-agnostic — consumed as CSS vars by any framework)</li>
+  <li>AI Toolbox (agents / skills / references)</li>
+  <li>the universal decisions above (Node 24, TypeScript, pnpm, Vitest, conventional commits)</li>
+</ul>
+
+<h2>Tier “light” — site, prototype, tooling, library</h2>
+<ul>
+  @for (line of lightTier; track line) { <li>{{ line }}</li> }
+</ul>
+
+<h3>Light defaults</h3>
+<table>
+  <thead><tr><th>Layer</th><th>Choice</th></tr></thead>
+  <tbody>
+    @for (row of lightDefaults; track row.layer) {
+      <tr><td>{{ row.layer }}</td><td>{{ row.choice }}</td></tr>
+    }
+  </tbody>
+</table>
+
+<h2>Tier “product” — multi-tenant SaaS</h2>
+<p>“light”, plus:</p>
+<table>
+  <thead><tr><th>Layer</th><th>Choice</th></tr></thead>
+  <tbody>
+    @for (row of productTier; track row.layer) {
+      <tr><td>{{ row.layer }}</td><td>{{ row.choice }}</td></tr>
+    }
+  </tbody>
+</table>
+
+<h2>Choosing a tier</h2>
+<ol>
+  <li>Multi-tenant SaaS with real users/data? → <strong>product</strong></li>
+  <li>Anything else (site, prototype, CLI, internal tool) → <strong>light</strong></li>
+</ol>
+<p>When in doubt, start light; it is easier to grow into product than to strip it.</p>

@@ -1,0 +1,30 @@
+<section class="hero">
+  <p class="eyebrow">Single source of truth</p>
+  <h1>Golden Path</h1>
+  <p class="lead">Stack &amp; architecture decisions for every project. Read this before creating a project, adding a dependency, or changing the stack.</p>
+  <div class="cta">
+    <a class="btn" routerLink="/stack">Stack &amp; Decisions</a>
+    <a class="btn ghost" routerLink="/deployment">Deployment &amp; Accounts</a>
+  </div>
+</section>
+
+<h2>What this is</h2>
+<p>The decision layer on top of what already exists in code. It does not duplicate tooling — it points to it.</p>
+<blockquote class="rule"><strong>Golden rule:</strong> an executed decision (a published <code>@thijulio</code> package or a project scaffold) beats this document. Docs rot; templates don't.</blockquote>
+
+<h2>Repositories / packages it references</h2>
+<ul>
+  <li><code>@thijulio/eslint-config</code>, <code>@thijulio/prettier-config</code>, <code>@thijulio/tsconfig</code> — repo <strong>dev-tooling</strong></li>
+  <li><code>@thijulio/biome-*</code> (personal) and <code>@thijulio/exodus-*</code> (professional) — repo <strong>design-systems</strong></li>
+  <li>AI Toolbox (agents / skills / references) — repo <strong>thijulio/thijulio-ai-toolbox</strong>, local source <code>.agents/</code></li>
+  <li>npm scope <code>@thijulio</code>, published to GitHub Packages</li>
+</ul>
+
+<h2>Navigate</h2>
+<ul class="cards">
+  <li><a routerLink="/stack"><strong>Stack &amp; Decisions</strong><span>Universal choices, tiers, frontend.</span></a></li>
+  <li><a routerLink="/tech-radar"><strong>Tech Radar</strong><span>adopt / trial / assess / hold.</span></a></li>
+  <li><a routerLink="/deployment"><strong>Deployment &amp; Accounts</strong><span>Repos, accounts, config (Netlify, Neon, AWS…).</span></a></li>
+  <li><a routerLink="/adrs"><strong>ADRs</strong><span>Why — the decision log.</span></a></li>
+  <li><a routerLink="/ai-toolbox"><strong>AI Toolbox</strong><span>agents / skills / references.</span></a></li>
+</ul>

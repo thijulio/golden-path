@@ -1,0 +1,9 @@
+:host { display: block; }
+.adr {
+  border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; margin-bottom: 14px;
+}
+.adr h3 { margin: 0 0 6px; }
+.adr p { margin: 0; color: var(--text-muted); }
+.adr-head { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.adr-id { font-weight: 700; font-family: ui-monospace, Menlo, monospace; font-size: 13px; }
+.adr-date { color: var(--text-muted); font-size: 12px; margin-left: auto; }

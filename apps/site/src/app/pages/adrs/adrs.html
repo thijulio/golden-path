@@ -1,0 +1,15 @@
+<p class="eyebrow">Decisions</p>
+<h1>ADRs — Architecture Decision Records</h1>
+<p class="lead">Why each decision was made. Stored in <code>decisions/</code>.</p>
+
+@for (a of adrs; track a.id) {
+  <article class="adr">
+    <div class="adr-head">
+      <span class="adr-id">ADR-{{ a.id }}</span>
+      <span class="badge adopt">{{ a.status }}</span>
+      <span class="adr-date">{{ a.date }}</span>
+    </div>
+    <h3>{{ a.title }}</h3>
+    <p>{{ a.summary }}</p>
+  </article>
+}

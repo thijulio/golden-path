@@ -1,0 +1,13 @@
+node_modules
+dist
+.angular
+.nx
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+memory.md
+handover-*.md
+.agents
+.claude

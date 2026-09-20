@@ -1,0 +1,6 @@
+[build]
+  command = "pnpm install --frozen-lockfile && nx build site"
+  publish = "apps/site/dist/site/browser"
+
+[build.environment]
+  NODE_VERSION = "24"

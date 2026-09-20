@@ -1,0 +1,19 @@
+<p class="eyebrow">Decisions</p>
+<h1>Tech Radar</h1>
+<p class="lead">Rings: adopt (default) · trial (small/experimental) · assess (study only) · hold (do not use). Updated when a decision changes.</p>
+
+@for (ring of radar; track ring.name) {
+  <h2>{{ ring.name }} <span class="badge {{ ring.cls }}">{{ ring.name }}</span></h2>
+  @if (ring.items.length === 0) {
+    <p class="muted">(none)</p>
+  } @else {
+    <table>
+      <thead><tr><th>Tech</th><th>Scope</th></tr></thead>
+      <tbody>
+        @for (item of ring.items; track item.tech) {
+          <tr><td>{{ item.tech }}</td><td>{{ item.scope }}</td></tr>
+        }
+      </tbody>
+    </table>
+  }
+}

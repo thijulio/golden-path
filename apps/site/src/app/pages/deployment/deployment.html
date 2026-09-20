@@ -1,0 +1,102 @@
+<p class="eyebrow">Execution</p>
+<h1>Deployment &amp; Accounts</h1>
+<p class="lead">Provision accounts and infrastructure, respecting the golden path. What exists vs. what to create.</p>
+
+<h2>Prerequisites (human)</h2>
+<ul>
+  <li>Publish <code>dev-tooling</code> (<code>@thijulio/eslint-config</code>, <code>-tsconfig</code>, <code>-prettier-config</code>) at v0.1.0.</li>
+  <li>Move <code>painter-studio</code> to <code>~/development/painter-studio</code> + <code>repo -></code> symlink (workspace-restructure).</li>
+  <li>Update <code>linked-repos.yaml</code> with <code>aws-account-bootstrap</code>, <code>pet-management-platform-infra</code>, <code>maison-feline</code>.</li>
+</ul>
+
+<h2>Human vs. agent</h2>
+<ul>
+  <li><strong>Agent can:</strong> install CLIs, run commands, create/edit config, create repo, run migrations, configure CI/CD, fill vars from provided secrets.</li>
+  <li><strong>Only the human can:</strong> create accounts (sign-up), confirm email, approve paid plans, accept ToS, copy API keys from web panels. The agent has no browser, email, or credit card.</li>
+</ul>
+
+<h2>Repositories</h2>
+<table>
+  <thead><tr><th>Repo</th><th>Role</th><th>Status</th><th>Note</th></tr></thead>
+  <tbody>
+    @for (r of repos; track r.name) {
+      <tr>
+        <td><code>{{ r.name }}</code></td>
+        <td>{{ r.role }}</td>
+        <td><span class="badge {{ r.status === 'exists' ? 'exists' : 'create' }}">{{ r.status }}</span></td>
+        <td>{{ r.note }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+<h2>Accounts &amp; configs</h2>
+<table>
+  <thead><tr><th>Service</th><th>State</th><th>To create</th><th>Credential</th><th>Where</th></tr></thead>
+  <tbody>
+    @for (s of services; track s.name) {
+      <tr>
+        <td><strong>{{ s.name }}</strong></td>
+        <td><span class="badge {{ s.exists ? 'exists' : 'create' }}">{{ s.exists ? 'exists' : 'create' }}</span></td>
+        <td>{{ s.toCreate }}</td>
+        <td><code>{{ s.credential }}</code></td>
+        <td>{{ s.where }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+<h2>Environment variables</h2>
+<table>
+  <thead><tr><th>Group</th><th>Variable</th><th>Client-safe?</th></tr></thead>
+  <tbody>
+    @for (e of envVars; track e.variable) {
+      <tr>
+        <td>{{ e.group }}</td>
+        <td><code>{{ e.variable }}</code></td>
+        <td>{{ e.clientSafe ? 'yes' : 'no' }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+<h2>Security (non-negotiable)</h2>
+<ul>
+  @for (s of security; track s) { <li>{{ s }}</li> }
+</ul>
+
+<h2>Definition of done</h2>
+<ul>
+  @for (d of dod; track d) { <li>{{ d }}</li> }
+</ul>
+
+<h2>CLI reference</h2>
+<pre>node -v                                  # expected v24.x
+corepack enable &amp;&amp; corepack prepare pnpm@latest --activate
+
+# repo / registry
+pnpm config set '@thijulio:registry' https://npm.pkg.github.com
+
+# Neon
+npm i -g neonctl
+neonctl auth
+neonctl projects create --name &lt;proj&gt; --region-id aws-eu-west-1
+neonctl connection-string --project-id &lt;id&gt; --branch main
+
+# Netlify
+npm i -g netlify-cli
+netlify login
+netlify sites:create
+netlify env:import .env
+
+# Drizzle / Prisma
+pnpm add drizzle-orm &amp;&amp; pnpm add -D drizzle-kit
+pnpm drizzle-kit generate &amp;&amp; pnpm drizzle-kit migrate
+pnpm prisma migrate dev
+
+# Cloudflare R2
+pnpm dlx wrangler login
+pnpm dlx wrangler r2 bucket create &lt;proj&gt;-media
+
+# AWS (product, via Terraform)
+terraform init &amp;&amp; terraform plan &amp;&amp; terraform apply</pre>

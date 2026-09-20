@@ -1,0 +1,17 @@
+<p class="eyebrow">Assets</p>
+<h1>AI Toolbox</h1>
+<p class="lead">Reusable agents, skills, and references live in two layers.</p>
+
+<h2>Layers</h2>
+<ul>
+  <li><strong>Local operating source:</strong> workspace root <code>.agents/</code> (agents/, skills/, references/). Invoke these day-to-day.</li>
+  <li><strong>Distributable layer:</strong> <code>thijulio/thijulio-ai-toolbox</code>. Assets are promoted here one at a time (never bulk-copy), each with ownership, portability, install path, and a smoke test.</li>
+</ul>
+
+<h2>When creating or changing a project</h2>
+<ol>
+  <li>Check <code>.agents/agents/INDEX.md</code> and <code>.agents/skills/</code> before improvising.</li>
+  <li>Architecture / stack decisions → invoke the <strong>software-architect</strong> agent. It anchors to this golden path and authors ADR drafts.</li>
+  <li>New external repo → <code>skills/create-external-repo</code>; new workspace folder → <code>skills/create-workspace-project</code>.</li>
+  <li>ADRs follow the toolbox template <code>references/architecture-decision-record.md</code>.</li>
+</ol>

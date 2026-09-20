@@ -1,0 +1,9 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@golden-path/*": ["packages/*/src/index.ts"]
+    }
+  }
+}
