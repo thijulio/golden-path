@@ -11,6 +11,8 @@ export const universal: UniversalDecision[] = [
   { domain: 'Tests', choice: 'Vitest (default)', notes: 'Jest only if NestJS requires; node --test for pure CLI.' },
   { domain: 'Publishing', choice: 'GitHub Packages, scope @thijulio', notes: 'nx release, conventional commits; release bumps only packages that really changed (ADR-0006).' },
   { domain: 'Git', choice: 'Conventional Commits', notes: 'no direct push to main.' },
+  { domain: 'Roadmaps', choice: 'docs/roadmap/ in each repository', notes: 'Never opened as GitHub issues; README.md indexes initiative or phase documents.' },
+  { domain: 'Delivery planning', choice: 'GitHub milestones', notes: 'Group implementation issues and PRs by phase or release; link milestones and roadmap documents to each other.' },
 ];
 
 export const lightTier: string[] = [

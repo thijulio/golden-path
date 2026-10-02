@@ -7,4 +7,5 @@ export const adrs: Adr[] = [
   { id: '0004', title: 'Frontend framework is a per-project choice', status: 'accepted', date: '2026-09-20', summary: 'React 19 default; Vue/Angular accepted. The container is the constraint.' },
   { id: '0005', title: 'Nx typecheck: one writer per output tree, complete inputs', status: 'A accepted · B proposed', date: '2026-10-02', summary: 'tsc never writes a bundler\'s outDir; tool outputs gitignored. Proposed: typecheck inputs include spec files (design-systems#11).' },
   { id: '0006', title: 'nx release only bumps packages that really changed', status: 'rules 1–4 proposed · rule 5 accepted', date: '2026-10-02', summary: 'Format files nx release stages. Proposed: projectsAffectedByDependencyUpdates auto, run-many on lockfile change, split tooling, non-releasing root-config commits (design-systems#9).' },
+  { id: '0007', title: 'Roadmaps live in docs/roadmap; delivery uses GitHub milestones', status: 'accepted', date: '2026-10-02', summary: 'Roadmaps are versioned documents under docs/roadmap/, never GitHub issues. Milestones group implementation issues and PRs and link to roadmap documents.' },
 ];
