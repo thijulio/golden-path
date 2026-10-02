@@ -9,7 +9,7 @@ export const universal: UniversalDecision[] = [
   { domain: 'Lint / format', choice: '@thijulio/eslint-config + @thijulio/prettier-config', notes: 'zero any / suppressions.' },
   { domain: 'Styling', choice: 'Design system @thijulio (tokens → CSS vars)', notes: 'Tailwind = hold.' },
   { domain: 'Tests', choice: 'Vitest (default)', notes: 'Jest only if NestJS requires; node --test for pure CLI.' },
-  { domain: 'Publishing', choice: 'GitHub Packages, scope @thijulio', notes: 'nx release, conventional commits.' },
+  { domain: 'Publishing', choice: 'GitHub Packages, scope @thijulio', notes: 'nx release, conventional commits; release bumps only packages that really changed (ADR-0006).' },
   { domain: 'Git', choice: 'Conventional Commits', notes: 'no direct push to main.' },
 ];
 

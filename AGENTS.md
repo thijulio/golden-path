@@ -66,7 +66,7 @@ changes, update both.
 | Lint / format | **@thijulio/eslint-config + @thijulio/prettier-config** | zero any / suppressions |
 | Styling | **Design system @thijulio** (tokens → CSS vars) | Tailwind = hold |
 | Tests | **Vitest (default)**; Jest only if NestJS requires; node --test for pure CLI | |
-| Publishing | **GitHub Packages**, scope @thijulio, nx release, conventional commits | |
+| Publishing | **GitHub Packages**, scope @thijulio, nx release, conventional commits | release bumps only packages that really changed (decisions/0006) |
 | Git | **Conventional Commits**; no direct push to main | |
 
 ### Frontend framework — per-project choice
