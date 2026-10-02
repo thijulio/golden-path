@@ -6,7 +6,7 @@
   <article class="adr">
     <div class="adr-head">
       <span class="adr-id">ADR-{{ a.id }}</span>
-      <span class="badge adopt">{{ a.status }}</span>
+      <span class="badge {{ a.status === 'accepted' ? 'adopt' : 'trial' }}">{{ a.status }}</span>
       <span class="adr-date">{{ a.date }}</span>
     </div>
     <h3>{{ a.title }}</h3>
