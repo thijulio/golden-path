@@ -68,6 +68,32 @@ changes, update both.
 | Tests | **Vitest (default)**; Jest only if NestJS requires; node --test for pure CLI | |
 | Publishing | **GitHub Packages**, scope @thijulio, nx release, conventional commits | release bumps only packages that really changed (decisions/0006) |
 | Git | **Conventional Commits**; no direct push to main | |
+| Roadmaps | **`docs/roadmap/`** in each repository | never opened as GitHub issues |
+| Delivery planning | **GitHub milestones** | group implementation issues and PRs; link to roadmap documents |
+
+### Roadmaps and GitHub milestones — every project
+
+Roadmap documentation lives in the owning repository under `docs/roadmap/`.
+Use `docs/roadmap/README.md` as the index and separate documents for initiatives
+or phases. Keep goals, scope, sequencing, and planning status in those documents,
+reviewed and versioned through normal pull requests.
+
+Never open a GitHub issue to represent a roadmap, roadmap phase, or roadmap
+document. GitHub issues are for actionable implementation work or bugs, not the
+roadmap itself.
+
+Use GitHub milestones to group delivery work for a phase or release. Link each
+milestone description to the relevant roadmap document and assign its
+implementation issues and PRs to that milestone. Link roadmap documents back to
+their milestones so planning intent and delivery progress remain connected.
+
+When a consumer project has roadmap documentation elsewhere, move it into
+`docs/roadmap/` and update references. If a roadmap was opened as an issue,
+preserve its planning content in the document and close the roadmap issue with
+a link to its replacement; retain actionable implementation issues under the
+appropriate milestone.
+
+Rationale: [ADR 0007](decisions/0007-roadmaps-and-milestones.md).
 
 ### Frontend framework — per-project choice
 
