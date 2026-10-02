@@ -36,6 +36,9 @@ When a shared decision changes, update its Markdown and typed site entry togethe
 versus accepted status. Validate the changed module and attempt the repository's checks; missing
 installed dependencies are a gate, not permission to install when the user excludes installation.
 
+Validation wrappers must retain the command exit status even when successful checks (such as
+`git diff --check`) produce no output. An empty log summary is not a failed verification.
+
 ## Completion handoff
 
 Name each worktree, branch, exact base/head, changed files, checks and their real outcomes, independent
