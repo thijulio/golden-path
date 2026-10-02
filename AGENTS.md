@@ -136,3 +136,9 @@ Reusable agents, skills, and references live in two layers:
 3. New external repo → skills/create-external-repo/SKILL.md; new workspace folder
    → skills/create-workspace-project/SKILL.md.
 4. ADRs follow the toolbox template references/architecture-decision-record.md.
+
+## Delivery context
+
+For a scoped delivery, consult the proposed [portable context preflight](workflows/delivery-context.md)
+and [ADR 0005](decisions/0005-portable-delivery-context.md). Record actual alignment and approved project
+exceptions; preserve stack choices unless explicitly changed. Proposal status does not imply acceptance.

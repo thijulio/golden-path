@@ -16,3 +16,8 @@ Single source of truth for stack choices across all projects.
 ## Deploy
 
 Netlify — see netlify.toml. Domain: golden-path.thijulio.com (CNAME Route53).
+
+## Delivery workflow
+
+The proposed [portable context preflight](workflows/delivery-context.md) records technical ownership,
+scoped alignment gaps and separate implementation/review/release evidence. See [ADR 0005](decisions/0005-portable-delivery-context.md).
