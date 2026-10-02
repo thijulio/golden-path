@@ -13,6 +13,11 @@ Unknown flags fail before mutation. Require approved empty-target purpose to boo
 marker and recorded identity before subsequent cleanup. Validate container labels, image, mounts
 and bindings before lifecycle operations. Do not claim a local hostname alone proves disposability.
 
+Empty-target verification must inventory namespace objects across catalogs, including routines,
+types/domains and sequences, rather than checking only tables or `pg_class`. Before marker creation
+allow no user objects; before first migration allow only the approved environment marker and its
+dependent objects. Test rejection both before initialization and after marking but before migration.
+
 Preserve unrelated containers and occupied ports; a bounded alternate loopback port belongs in
 project instructions and the handoff. Never use broad Docker prune or destructive schema resets.
 Close role pools before dropping only the recorded database. Avoid forced backend termination as
