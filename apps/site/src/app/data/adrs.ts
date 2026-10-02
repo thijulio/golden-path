@@ -6,4 +6,5 @@ export const adrs: Adr[] = [
   { id: '0003', title: 'Design system is the single styling source', status: 'accepted', date: '2026-09-20', summary: 'Design system via tokens + CSS vars; Tailwind is hold and being removed.' },
   { id: '0004', title: 'Frontend framework is a per-project choice', status: 'accepted', date: '2026-09-20', summary: 'React 19 default; Vue/Angular accepted. The container is the constraint.' },
   { id: '0005', title: 'Nx typecheck: one writer per output tree, complete inputs', status: 'A accepted · B proposed', date: '2026-10-02', summary: 'tsc never writes a bundler\'s outDir; tool outputs gitignored. Proposed: typecheck inputs include spec files (design-systems#11).' },
+  { id: '0006', title: 'nx release only bumps packages that really changed', status: 'rules 1–4 proposed · rule 5 accepted', date: '2026-10-02', summary: 'Format files nx release stages. Proposed: projectsAffectedByDependencyUpdates auto, run-many on lockfile change, split tooling, non-releasing root-config commits (design-systems#9).' },
 ];
