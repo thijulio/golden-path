@@ -62,7 +62,7 @@ changes, update both.
 | Runtime | **Node 24** | Node 22 is legacy, migrating |
 | Language | **TypeScript (strict)** | via @thijulio/tsconfig |
 | Package manager | **pnpm** | |
-| Monorepo | **Nx** | targets from plugin inference |
+| Monorepo | **Nx** | targets from plugin inference; one writer per output tree + complete typecheck inputs (decisions/0005) |
 | Lint / format | **@thijulio/eslint-config + @thijulio/prettier-config** | zero any / suppressions |
 | Styling | **Design system @thijulio** (tokens → CSS vars) | Tailwind = hold |
 | Tests | **Vitest (default)**; Jest only if NestJS requires; node --test for pure CLI | |

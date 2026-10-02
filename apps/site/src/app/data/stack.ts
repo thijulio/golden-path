@@ -5,7 +5,7 @@ export const universal: UniversalDecision[] = [
   { domain: 'Runtime', choice: 'Node 24', notes: 'Node 22 is legacy, migrating.' },
   { domain: 'Language', choice: 'TypeScript (strict)', notes: 'via @thijulio/tsconfig.' },
   { domain: 'Package manager', choice: 'pnpm', notes: '' },
-  { domain: 'Monorepo', choice: 'Nx', notes: 'targets from plugin inference.' },
+  { domain: 'Monorepo', choice: 'Nx', notes: 'targets from plugin inference; one writer per output tree + complete typecheck inputs (ADR-0005).' },
   { domain: 'Lint / format', choice: '@thijulio/eslint-config + @thijulio/prettier-config', notes: 'zero any / suppressions.' },
   { domain: 'Styling', choice: 'Design system @thijulio (tokens → CSS vars)', notes: 'Tailwind = hold.' },
   { domain: 'Tests', choice: 'Vitest (default)', notes: 'Jest only if NestJS requires; node --test for pure CLI.' },
