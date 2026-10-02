@@ -1,15 +1,12 @@
 # 0005 — Nx typecheck: one writer per output tree, complete inputs
 
-- **Status:** A accepted · B proposed
+- **Status:** accepted
 - **Date:** 2026-10-02
 
 | Part | Status | Source |
 |---|---|---|
 | A — one writer per output tree | accepted | thijulio/design-systems#12 (merged 2026-10-02) |
-| B — typecheck inputs include spec files | proposed | thijulio/design-systems#11 (open) |
-
-> TODO: flip B to accepted once https://github.com/thijulio/design-systems/pull/11
-> merges; drop it (or amend) if that PR is closed.
+| B — typecheck inputs include spec files | accepted | thijulio/design-systems#11 (merged 2026-10-02) |
 
 ## Context
 

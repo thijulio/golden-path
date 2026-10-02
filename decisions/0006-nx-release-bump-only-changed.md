@@ -1,16 +1,12 @@
 # 0006 — nx release only bumps packages that really changed
 
-- **Status:** rules 1–4 proposed · rule 5 accepted
+- **Status:** accepted
 - **Date:** 2026-10-02
 
 | Rules | Status | Source |
 |---|---|---|
-| 1–4 — affected scope, CI, tooling split, commit types | proposed | thijulio/design-systems#9 (open) |
+| 1–4 — affected scope, CI, tooling split, commit types | accepted | thijulio/design-systems#9 (merged 2026-10-02) |
 | 5 — format files staged by nx release | accepted | thijulio/design-systems#10 (merged 2026-10-02) |
-
-> TODO: flip rules 1–4 to accepted once
-> https://github.com/thijulio/design-systems/pull/9 merges; drop them (or amend)
-> if that PR is closed.
 
 ## Context
 
@@ -69,7 +65,9 @@ main failed.
 ## Consequences
 
 - Fewer no-op releases and honest changelogs; consumers stop seeing
-  "version bump only" noise.
+  "version bump only" noise. Confirmed on design-systems main: the release run
+  for the #9 merge (`dc4b74e`, Actions run 37002696807) detected no changes for
+  all 9 packages and published nothing.
 - CI coverage on toolchain upgrades is unchanged (rule 2 compensates for rule 1).
 - Commit typing becomes load-bearing: a `feat:`/`fix:` PR title on a root-config
   change still bumps everything. Reviewers check the squash title.
