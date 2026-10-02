@@ -145,3 +145,5 @@ and [ADR 0005](decisions/0005-portable-delivery-context.md). Record actual align
 exceptions; preserve stack choices unless explicitly changed. Proposal status does not imply acceptance.
 
 Database safety: proposed [isolated delivery workflow](workflows/isolated-database-delivery.md) and [ADR 0006](decisions/0006-isolated-database-delivery.md); stack adoption remains unchanged.
+
+Incremental imports: proposed [lossless workflow](workflows/lossless-incremental-import.md) and [ADR 0007](decisions/0007-lossless-incremental-import.md); require source preservation, replay and merge-policy review.

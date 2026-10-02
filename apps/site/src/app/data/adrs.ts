@@ -51,4 +51,11 @@ export const adrs: Adr[] = [
     summary:
       'Disposable target markers, checksummed direct-client migrations and real PostgreSQL role/concurrency/rollback evidence; independent review required, existing stack unchanged.',
   },
+  {
+    id: '0007',
+    title: 'Lossless incremental import safety',
+    status: 'proposed',
+    date: '2026-10-02',
+    summary: 'Immutable source evidence, three-way field/group merge, reviewed expected-hash resolutions, native-edit-safe replay and audited PostgreSQL transactions; independent review required.',
+  },
 ];
