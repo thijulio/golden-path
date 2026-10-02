@@ -143,3 +143,5 @@ Reusable agents, skills, and references live in two layers:
 For a scoped delivery, consult the proposed [portable context preflight](workflows/delivery-context.md)
 and [ADR 0005](decisions/0005-portable-delivery-context.md). Record actual alignment and approved project
 exceptions; preserve stack choices unless explicitly changed. Proposal status does not imply acceptance.
+
+Database safety: proposed [isolated delivery workflow](workflows/isolated-database-delivery.md) and [ADR 0006](decisions/0006-isolated-database-delivery.md); stack adoption remains unchanged.
