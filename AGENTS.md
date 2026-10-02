@@ -3,7 +3,8 @@
 Single source of truth for stack choices across all projects. Read this before
 creating a new project, adding a dependency, or changing stack.
 
-> Living state and in-flight migrations: memory.md
+> Repository overview: README.md; proposal/acceptance state: decisions/.
+> Project execution state belongs in each project's delivery record.
 > Adopt / trial / assess / hold: tech-radar.md
 > Why (ADRs): decisions/
 
