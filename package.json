@@ -8,7 +8,9 @@
     "build": "nx build site",
     "test": "nx test site",
     "start": "nx serve site",
-    "graph": "nx graph"
+    "graph": "nx graph",
+    "check:database-decision": "node --test tools/database-decision.spec.mjs",
+    "check:import-decision": "node --test tools/import-decision.spec.mjs"
   },
   "devDependencies": {
     "@nx/angular": "23.2.1",

@@ -145,6 +145,9 @@ Canonical "product" example: pet-management-platform.
 
 When in doubt, start light; it is easier to grow into product than to strip it.
 
+Project-specific exceptions are recorded as ADRs. Smart Library is light with
+PostgreSQL/Neon, Nuxt 4 and Better Auth exceptions ([ADR 0010](decisions/0010-smart-library-stack-exception.md)).
+
 ## AI Toolbox (agent assets — use it)
 
 Reusable agents, skills, and references live in two layers:
