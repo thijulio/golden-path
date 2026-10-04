@@ -38,7 +38,8 @@ The golden path ships as an **Nx + pnpm monorepo** (this repo):
 
 Netlify — see `netlify.toml`. Build command `pnpm install --frozen-lockfile && nx build site`,
 publish dir `apps/site/dist/site/browser`. Domain `golden-path.thijulio.com` (CNAME Route53).
-A push does not deploy; deploy is a separate human-gated action.
+Every PR gets a Netlify deploy preview; merging to `main` publishes production
+within a minute. The merge is the human gate: never merge without the owner's yes.
 
 ### Keeping content in sync
 

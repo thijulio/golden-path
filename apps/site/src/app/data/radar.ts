@@ -16,7 +16,9 @@ export const radar: Ring[] = [
     { tech: 'Zustand + TanStack React Query', scope: 'product state' },
     { tech: 'AWS eu-west-3 + Terraform', scope: 'product infra' },
   ]},
-  { name: 'Trial', cls: 'trial', items: [] },
+  { name: 'Trial', cls: 'trial', items: [
+    { tech: 'Astro 7 + React islands (@astrojs/react)', scope: 'content-first sites with a persistent canvas (ADR 0011); app-like products stay Vite + React' },
+  ]},
   { name: 'Assess', cls: 'assess', items: [] },
   { name: 'Hold', cls: 'hold', items: [
     { tech: 'Tailwind', scope: 'replaced by the design system; legacy in PMP' },

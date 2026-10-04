@@ -22,7 +22,9 @@ Rings: **adopt** (default) · **trial** (small/experimental) · **assess** (stud
 
 ## Trial
 
-- (none)
+| Tech | Scope |
+|---|---|
+| Astro 7 + React islands (@astrojs/react) | content-first sites with a persistent canvas (decisions/0011); app-like products stay Vite + React |
 
 ## Assess
 
